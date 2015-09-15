@@ -39,7 +39,7 @@ module.exports = function(args){
                     });
                 });
             } else {
-                var url = req.protocol + '://' + req.get('Host') + req.originalUrl.replace(/\?.*/, '');
+                var url = req.route.path;
                 res.send( "<head><style>"+css+"</style></head>" + renderList(list , "Specifications", url));
             }
         });
